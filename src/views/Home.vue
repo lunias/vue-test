@@ -1,13 +1,9 @@
 <template lang="pug">
-  div
-    h1(class="hello") sup?
-    h2 we in here
-    button(class="button")
+p This is the home
 </template>
 
 <script>
 export default {
-  name: 'hello',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'

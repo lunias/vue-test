@@ -7,9 +7,11 @@ function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
+const projectRoot = path.resolve(__dirname, '../')
+
 module.exports = {
   entry: {
-    app: './src/main.js'
+    app: './src/index.js'
   },
   output: {
     path: config.build.assetsRoot,
@@ -22,7 +24,10 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('src'),
+      src: resolve('src'),
+      assets: resolve('src/assets'),
+      components: resolve('src/components'),
+      views: resolve('src/views')
     }
   },
   module: {

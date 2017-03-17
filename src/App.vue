@@ -1,18 +1,20 @@
-<template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
-  </div>
+<template lang="pug">
+#app
+  top-nav
+  router-view
 </template>
 
 <script>
+import { TopNav } from 'components/layout'
 export default {
-  name: 'app'
+  components: {
+    TopNav
+  }
 }
 </script>
 
 <style lang="sass">
-@import "~bulma/bulma.sass"
+@import "~bulma"
 #app
   font-family: 'Avenir', Helvetica, Arial, sans-serif
   -webkit-font-smoothing: antialiased
