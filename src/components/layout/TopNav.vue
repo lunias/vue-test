@@ -1,37 +1,32 @@
 <template lang="pug">
-nav.nav.has-shadow
+section.hero.is-primary.is-medium
+  .hero-head
+    header.nav
+      .container
+        .nav-left
+          a.nav-item: img(src="http://bulma.io/images/bulma-type-white.png" alt="Bulma logo")
+        .nav-toggle(@click="toggleNav" v-bind:class="{ 'is-active': navToggled }")
+          span
+          span
+          span
+        .nav-right.nav-menu(v-bind:class="{ 'is-active': navToggled }")
+          a.nav-item Home
+          a.nav-item Examples
+          a.nav-item Documentation
 
-  #nav-left.nav-left
-    a.nav-item: img(src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo")
+  .hero-body
+    .container.has-text-centered
+      h1.title Title
+      h2.subtitle Subtitle
 
-  #nav-center.nav-center
-    a.nav-item
-      span.icon
-        i.fa.fa-github
-    a.nav-item
-      span.icon
-        i.fa.fa-twitter
-
-  span#nav-toggle.nav-toggle(@click="toggleNav" v-bind:class="{ 'is-active': navToggled }")
-    span
-    span
-    span
-
-  #nav-right.nav-right.nav-menu(v-bind:class="{ 'is-active': navToggled }")
-    a.nav-item.is-tab.is-active
-      span.icon.is-small: i.fa.fa-home
-      span Home
-    a.nav-item.is-tab Documentation
-    a.nav-item.is-tab Blog
-
-    span.nav-item
-      a.button
-        span.icon: i.fa.fa-twitter
-        span Tweet
-      a.button.is-primary
-        span.icon: i.fa.fa-download
-        span Download
-
+  .hero-foot
+    nav.tabs.is-boxed.has-shadow
+      .container
+        ul
+          li.is-active: a Overview
+          li: a Modifiers
+          li: a Grid
+          li: a Components
 </template>
 
 <script>

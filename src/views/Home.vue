@@ -1,12 +1,26 @@
 <template lang="pug">
-p This is the home
+section.section
+  .box(v-html="msg")
 </template>
 
 <script>
+
+function lorem (numParagraphs) {
+  var lorem = ''
+  for (var i = 0; i < numParagraphs; i++) {
+    lorem += '<p>'
+    for (var j = 0; j < Math.floor(Math.random() * 100) + 20; j++) {
+      lorem += 'lorem ipsum '
+    }
+    lorem += '</p>'
+  }
+  return lorem
+}
+
 export default {
-  data () {
+  data: function () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: lorem(20)
     }
   }
 }
@@ -14,17 +28,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass" scoped>
-h1, h2
-  font-weight: normal
 
-ul
-  list-style-type: none
-  padding: 0
-
-li
-  display: inline-block
-  margin: 0 10px
-
-a
-  color: #42b983
 </style>
