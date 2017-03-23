@@ -1,14 +1,21 @@
 <template lang="pug">
 #app
   top-nav
-  router-view
+  section.section.columns
+    .column.is-one-quarter
+      side-nav
+    .column
+      router-view
+  page-footer
 </template>
 
 <script>
-import { TopNav } from 'components/layout'
+import { TopNav, SideNav, PageFooter } from 'components/layout'
 export default {
   components: {
-    TopNav
+    TopNav,
+    SideNav,
+    PageFooter
   }
 }
 </script>

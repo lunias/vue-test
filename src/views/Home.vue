@@ -4,7 +4,6 @@ section.section
 </template>
 
 <script>
-
 function lorem (numParagraphs) {
   var lorem = ''
   for (var i = 0; i < numParagraphs; i++) {

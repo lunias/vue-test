@@ -10,7 +10,7 @@ section.hero.is-primary.is-medium
           span
           span
         .nav-right.nav-menu(v-bind:class="{ 'is-active': navToggled }")
-          a.nav-item Home
+          a.nav-item.is-active Home
           a.nav-item Examples
           a.nav-item Documentation
 
@@ -48,4 +48,10 @@ export default {
 <style lang="sass" scoped>
 h1
   font-weight: normal
+.nav
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  background-color: #00d1b2
 </style>
